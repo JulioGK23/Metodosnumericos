@@ -1,0 +1,14 @@
+# ejecutables de C
+suma
+calculadora
+*.out
+*.exe
+
+# archivos objeto
+*.o
+
+# Python
+__pycache__/
+
+# Octave
+octave-workspace
