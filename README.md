@@ -12,8 +12,18 @@ Fecha de entrega: 10/10/2026 <br>
 
 <br> 
 1. ¿Qué son los metodoso numéricos?<br> 
-2. ¿Cómo de aplican en su ingenieria?<br> 
-3. ¿Qué herramientas se usan para trabajar con metodos numericos?<br> 
+<p align="justify">
+Los metodos numericos son tecnicas que modifican un problema matematico para poder resolverlo solo con operaciones aritmeticas. 
+A diferencia de una solución analitica la cual nos da una formula exacta y un valor verdadero, los metodos numericos los sustituyen 
+por esquemas discretos(convierte un problema infinito en uno finito) y algoritmos iterativos(repetir un mismo paso muchas veces, usando el resultado anterior como punto de partida del siguiente) que calculan valores estimados.
+El resultado numérico es aproximado por dos fuentes de error: el truncamiento, que aparece al representar un proceso infinito con uno finito  y el redondeo, que surge porque las computadoras almacenan los números con un número finito de dígitos.
+</p>
+
+2. ¿Cómo de aplican en su ingenieria?<br>
+En ingenieria electronica los metodos numericos se puede aplicar para analizar, diseñar o resolver circuitos los cuales mientras mas complejos son
+tienen ecuacciones muy complicadas o muy grandes para resolverlas de forma analitica. 
+   
+4. ¿Qué herramientas se usan para trabajar con metodos numericos?<br> 
 4.¿Qué herramientas usamos en este curso?<br> 
 
 ---
