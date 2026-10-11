@@ -98,27 +98,26 @@ Capturas de pantalla del entorno
 Figura 1: Contenedor encendido
 
 1. docker compose up -d --build
-   <img width="1123" height="590" alt="image" src="https://github.com/user-attachments/assets/1f705f56-4d8c-4e66-89c6-97bc81f693c0" />
+   <img width="1096" height="545" alt="image" src="https://github.com/user-attachments/assets/2b4eabff-c744-4c6e-acc6-d4ca3bb5e14b" />
+
 Figura 2: Contenedor encendido ejecutado en segundo plano 
 2. docker compose ps
-   <img width="1424" height="260" alt="image" src="https://github.com/user-attachments/assets/c732dde7-1ee6-4c0b-b668-e2506edcdd04" />
+
+<img width="1171" height="236" alt="image" src="https://github.com/user-attachments/assets/512dc3f1-c496-4236-b4ea-480631cc65f3" />
+   
 Figura 3: Estado del contenedor 
    
 3. Dentro del contenedor: octave --version, python3 --version y gcc --version.<br>
-   <img width="1102" height="331" alt="image" src="https://github.com/user-attachments/assets/25b9b46a-d128-48f3-9cc0-3afc37fab4d2" />
-   Figura 4.1:versión de octave
-   
-   <img width="810" height="165" alt="image" src="https://github.com/user-attachments/assets/6e622821-6138-4a06-807c-42139370635c" />
+  
+   <img width="1288" height="737" alt="image" src="https://github.com/user-attachments/assets/69482142-532b-459e-99df-00238c8b4fee" />
+    Figura 4:version de pyton, c y octave
 
-   Figura 4.2: versión de pyton3
-   
-   
-   <img width="710" height="178" alt="image" src="https://github.com/user-attachments/assets/faeae498-0911-4caf-bc19-a0e34ba15b4f" />
-
-   Figura 4.3: versión de c++
-   
 4. Docker Desktop con el contenedor del curso en la lista.
    <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/6d9b57ad-5796-469a-b05b-3b92e2c1a275" />
 
 5. Sus dos programas ejecutándose dentro del contenedor.
+   <img width="1082" height="362" alt="image" src="https://github.com/user-attachments/assets/6f151445-4351-49ba-a985-4b7e85d5bfde" />
+   <img width="1263" height="868" alt="image" src="https://github.com/user-attachments/assets/a3159cf9-f0b8-4f87-a083-69b5872184b3" />
+
+
    
