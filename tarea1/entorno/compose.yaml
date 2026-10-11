@@ -12,7 +12,7 @@ services:
     image: metodos-1151039:26o
     container_name: metodos_1151039
     volumes:
-      - ./:/trabajo                 # esta carpeta, vista desde dentro
+      - ../:/trabajo                 # esta carpeta, vista desde dentro
     working_dir: /trabajo
     stdin_open: true                # las dos mantienen el contenedor
     tty: true                       #   encendido, esperando órdenes
