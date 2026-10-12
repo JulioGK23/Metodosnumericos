@@ -36,6 +36,7 @@ ea = fabs((aprox - anterior) / aprox) * 100.0;
 | 6 | 	0.00005 (5e-05)| 9| 1.648721265035962|3.43549e-07 |
 | 17 | 5e-16| 16| 1.648721270700128|2.69354e-14 |
 
+<p align="justify">
 1. ¿Cuántos términos hacen falta en cada caso?
 Para obtener 3 cifras significativas se necesitan 6 términos, para 6 cifras se necesitan 9 términos y para 17 cifras se necesitan 16 términos, según los resultados de la tabla. Esto muestra que, mientras mayor sea la precisión que buscamos, más términos de la serie de Maclaurin debemos calcular.
 
@@ -46,6 +47,7 @@ Para 3 y 6 cifras significativas, el error aproximado (εa) es mayor que el erro
    Relaciónenlo con 0.1 + 0.2 de la Tarea 1.
 
 Aunque solicitamos 17 cifras significativas, en realidad obtenemos aproximadamente 15 cifras correctas, debido a que Python utiliza números float de doble precisión, que permiten alrededor de 15 a 16 cifras significativas. El error verdadero de 2.69354×10⁻¹⁴ % equivale a un error relativo de aproximadamente 2.7×10⁻¹⁶. El programa terminó en el término 16 porque εa llegó a 0, no porque alcanzara la precisión solicitada, ya que εt sigue siendo mayor que εs (5×10⁻¹⁶ %). Esto se relaciona con 0.1 + 0.2, que en Python produce 0.30000000000000004 debido a que algunos números decimales no pueden representarse exactamente en binario. De la misma manera, al calcular la serie de Maclaurin, la precisión está limitada por la representación numérica, aunque 
+</p>
 
 ## Uso de inteligencia artificial
 
