@@ -6,9 +6,9 @@
 | | |
 |---|---|
 | Equipo | |
-| Integrantes (nombre, matrícula y licenciatura) | |
+| Integrantes (nombre, matrícula y licenciatura) |*Fuentes Bayona luis Fernando-2243038451-Licenciatura en Ingenieria Mecanica |
 | Repositorio de la Tarea 1 de | |
-| Fecha | |
+| Fecha | 12/Octubre/2026|
 
 ## 1. Octave y Python
 
