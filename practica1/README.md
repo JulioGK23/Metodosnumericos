@@ -20,9 +20,7 @@
 ## 2. Las dos líneas que completamos en `maclaurin.c`
 
 ```c
-/* COMPLETAR 1 */
 termino = termino * X / n;
-/* COMPLETAR 2 */
 ea = fabs((aprox - anterior) / aprox) * 100.0;
 ```
 
