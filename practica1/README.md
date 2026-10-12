@@ -33,7 +33,7 @@ ea = fabs((aprox - anterior) / aprox) * 100.0;
 
 | Cifras | εs (%) | Términos | Aproximación | Error verdadero (%) |
 |---|---|---|---|---|
-| 3 | | | | |
+| 3 | 0.05	|6 | 1.648697916666667|	0.00141649 |
 | 6 | | | | |
 | 17 | | | | |
 
