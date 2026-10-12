@@ -57,3 +57,7 @@ El desarrollo de esta practica se tomo apoyo de una inteligencia artificial (Clo
 
 ## Referencias
 
+Burden, R. L., & Faires, J. D. (2011). *Análisis numérico* (9.ª ed.). Cengage Learning.
+
+Chapra, S. C., & Canale, R. P. (2015). *Métodos numéricos para ingenieros* (7.ª ed.). McGraw-Hill.
+
