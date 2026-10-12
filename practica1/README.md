@@ -7,7 +7,7 @@
 |---|---|
 | Equipo | |
 | Integrantes (nombre, matrícula y licenciatura) |*Fuentes Bayona luis Fernando-2243038451-Licenciatura en Ingenieria Mecanica *Trejo Ponce Julio Antonio- 2243038326-Licenciatura en Ingenieria Electronica |
-| Repositorio de la Tarea 1 de | JulioGk23|
+| Repositorio de la Tarea 1 de | JulioGK23|
 | Fecha | 12/Octubre/2026|
 
 ## 1. Octave y Python
@@ -16,7 +16,8 @@
 ![Python](img/02-python.png)
 
 ¿Coinciden con la lámina 25 de la unidad I?
-si coinciden los resultados, en los programas se alcanza una misma  aproximacion y el mismo error relativo que coincide con la lamina 25 de la unidad 1
+
+si coinciden los resultados, en los programas se alcanza una misma  aproximacion (1.648697916666667) y el mismo error relativo (0.00141649 %) que coincide con la lamina 25 de la unidad 1
 
 ## 2. Las dos líneas que completamos en `maclaurin.c`
 
@@ -51,6 +52,8 @@ Aunque solicitamos 17 cifras significativas, en realidad obtenemos aproximadamen
 ## Uso de inteligencia artificial
 
 Ninguno / Cuál y para qué.
+
+El desarrollo de esta practica se tomo apoyo de una inteligencia artificial (Cloude) para poder comprender e interpretar los datos de las tablas y su relacion con las cifras signifcativas solicitadas en la parte 3 de la practica 1  
 
 ## Referencias
 
