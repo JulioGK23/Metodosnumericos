@@ -21,7 +21,9 @@
 
 ```c
 /* COMPLETAR 1 */
+termino = termino * X / n;
 /* COMPLETAR 2 */
+ea = fabs((aprox - anterior) / aprox) * 100.0;
 ```
 
 ![C](img/03-c.png)
