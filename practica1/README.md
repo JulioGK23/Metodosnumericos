@@ -34,7 +34,7 @@ ea = fabs((aprox - anterior) / aprox) * 100.0;
 | Cifras | εs (%) | Términos | Aproximación | Error verdadero (%) |
 |---|---|---|---|---|
 | 3 | 0.05	|6 | 1.648697916666667|	0.00141649 |
-| 6 | | | | |
+| 6 | 	0.00005 (5e-05)| 9| 1.648721265035962|3.43549e-07 |
 | 17 | | | | |
 
 1. ¿Cuántos términos hacen falta en cada caso?
