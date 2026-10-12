@@ -54,3 +54,7 @@ Ninguno / Cuál y para qué.
 
 ## Referencias
 
+Burden, R. L., & Faires, J. D. (2011). *Análisis numérico* (9.ª ed.). Cengage Learning.
+
+Chapra, S. C., & Canale, R. P. (2015). *Métodos numéricos para ingenieros* (7.ª ed.). McGraw-Hill.
+
