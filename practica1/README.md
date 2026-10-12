@@ -16,11 +16,14 @@
 ![Python](img/02-python.png)
 
 ¿Coinciden con la lámina 25 de la unidad I?
+si coinciden los resultados, en los programas se alcanza una misma  aproximacion y el mismo error relativo que coincide con la lamina 25 de la unidad 1
 
 ## 2. Las dos líneas que completamos en `maclaurin.c`
 
 ```c
+/* COMPLETAR 1 */
 termino = termino * X / n;
+/* COMPLETAR 2 */
 ea = fabs((aprox - anterior) / aprox) * 100.0;
 ```
 
