@@ -6,9 +6,9 @@
 | | |
 |---|---|
 | Equipo | |
-| Integrantes (nombre, matrícula y licenciatura) | |
+| Integrantes (nombre, matrícula y licenciatura) |*Fuentes Bayona luis Fernando-2243038451-Licenciatura en Ingenieria Mecanica |
 | Repositorio de la Tarea 1 de | |
-| Fecha | |
+| Fecha | 12/Octubre/2026|
 
 ## 1. Octave y Python
 
@@ -21,9 +21,7 @@ si coinciden los resultados, en los programas se alcanza una misma  aproximacion
 ## 2. Las dos líneas que completamos en `maclaurin.c`
 
 ```c
-/* COMPLETAR 1 */
 termino = termino * X / n;
-/* COMPLETAR 2 */
 ea = fabs((aprox - anterior) / aprox) * 100.0;
 ```
 
@@ -34,8 +32,8 @@ ea = fabs((aprox - anterior) / aprox) * 100.0;
 | Cifras | εs (%) | Términos | Aproximación | Error verdadero (%) |
 |---|---|---|---|---|
 | 3 | 0.05	|6 | 1.648697916666667|	0.00141649 |
-| 6 | | | | |
-| 17 | | | | |
+| 6 | 	0.00005 (5e-05)| 9| 1.648721265035962|3.43549e-07 |
+| 17 | 5e-16| 16| 1.648721270700128|2.69354e-14 |
 
 1. ¿Cuántos términos hacen falta en cada caso?
 2. En cada fila de la tabla, ¿εa es mayor o menor que εt? ¿Por qué conviene detenerse con εa?
