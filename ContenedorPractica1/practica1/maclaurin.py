@@ -16,7 +16,7 @@ Este programa está completo.
 import math
 
 # ============================= DATOS =============================
-X = 0.5         # el punto donde se evalúa e^x
+X = 1         # el punto donde se evalúa e^x
 CIFRAS = 3      # cifras significativas que se piden
 NMAX = 30       # máximo de términos
 # =================================================================
