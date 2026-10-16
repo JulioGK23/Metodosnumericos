@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | Equipo | |
-| Integrantes (nombre, matrícula y licenciatura) | |
+| Integrantes (nombre, matrícula y licenciatura) |*Fuentes Bayona Luis Fernando 2243038451 Ingenieria Mecanica   *Trejo Ponce Julio Antonio 2243038326 Ingenieria Electronica |
 | Ecuación asignada | Número y problema |
 | Fecha | |
 
