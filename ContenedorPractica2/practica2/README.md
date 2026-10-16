@@ -6,9 +6,9 @@
 | | |
 |---|---|
 | Equipo | |
-| Integrantes (nombre, matrícula y licenciatura) | |
+| Integrantes (nombre, matrícula y licenciatura) |*Trejo Ponce Julio Antonio 2243038326 Ingenieria Electronica  *Fuentes Bayona Luis Fernando 2243038451 Ingenieria Mecanica |
 | Ecuación asignada | Número y problema |
-| Fecha | |
+| Fecha | 16 de Octubre de 2026|
 
 ---
 
@@ -23,11 +23,11 @@ coinciden con las de las láminas de la unidad II.
 ## 2. Las cinco líneas que completamos en `raices.c`
 
 ```c
-/* COMPLETAR 1 */
-/* COMPLETAR 2 */
-/* COMPLETAR 3 */
-/* COMPLETAR 4 */
-/* COMPLETAR 5 */
+return fabs((nuevo-anterior) /nuevo) *100; 
+x=b - (f(b) *(a-b)) /(f(a)-f(b)); 
+x_nuevo=g(x);*/
+x_nuevo=x-f(x) fp(X);*/
+x_nuevo=x-(delta* f(x)) / (f(x+delta) -f(x));
 ```
 
 ![Compilación](img/03-c-compilacion.png)
