@@ -9,47 +9,39 @@
  * Dentro del contenedor, en la carpeta practica2:
  *     gcc -O2 -std=c17 -Wall -o raices raices.c -lm
  *     ./raices
- *
- * Faltan cinco líneas, marcadas COMPLETAR 1 a COMPLETAR 5. Mientras falten,
- * el programa compila y corre, pero las tablas salen mal.
  */
 #include <math.h>
 #include <stdio.h>
 
 /* ======================== BLOQUE DEL PROBLEMA ======================== */
-/* Es lo único que se cambia para resolver otra ecuación (ejercicio 4).  */
+/* Ecuación 14 · Electrónica · Ángulo de extinción de un rectificador de media onda con carga RL */
 
-#define DESCRIPCION "f(c) = g m / c (1 - exp(-c t / m)) - v,  g = 9.8, m = 68.1, t = 10, v = 40"
-#define DESCR_G     "g(c) = g m / v (1 - exp(-c t / m))"
+#define DESCRIPCION "f(b) = sin(b) - Q cos(b) + Q exp(-b / Q),  Q = wL/R = 2"
+#define DESCR_G     "g(b) = b + f(b) / 2"
 
-static const double GRAV   = 9.8;    /* gravedad, m/s^2                    */
-static const double MASA   = 68.1;   /* masa del paracaidista, kg          */
-static const double TIEMPO = 10.0;   /* tiempo de caída, s                 */
-static const double VEL    = 40.0;   /* velocidad medida, m/s              */
+static const double WLR = 2.0;   /* cociente wL/R de la carga */
 
-static const double A = 12.0, B = 16.0;  /* intervalo de los métodos cerrados */
-static const double X0    = 12.5;        /* inicio de los métodos abiertos    */
-static const double DELTA = 0.05;        /* incremento de la secante modificada */
+static const double A = 3.0, B = 6.0;  /* intervalo de los métodos cerrados */
+static const double X0    = 4.0;        /* inicio de los métodos abiertos    */
+static const double DELTA = 0.01;        /* incremento de la secante modificada */
 static const double TOL   = 0.5;         /* tolerancia: ea en %               */
 #define NMAX 50                          /* máximo de iteraciones             */
 
-/* La función cuya raíz se busca: el coeficiente de arrastre c, en kg/s. */
-static double f(double c)
+static double f(double x)
 {
-    return GRAV * MASA / c * (1.0 - exp(-c * TIEMPO / MASA)) - VEL;
+    return sin(x) - WLR*cos(x) + WLR*exp(-x/WLR);
 }
 
 /* Su derivada, para Newton-Raphson. */
-static double fp(double c)
+static double fp(double x)
 {
-    return GRAV * MASA / c * (TIEMPO / MASA) * exp(-c * TIEMPO / MASA)
-         - GRAV * MASA / (c * c) * (1.0 - exp(-c * TIEMPO / MASA));
+    return cos(x) + WLR*sin(x) - exp(-x/WLR);
 }
 
-/* Despeje x = g(x) para punto fijo: c = g m / v (1 - exp(-c t / m)). */
-static double g(double c)
+/* Despeje x = g(x) para punto fijo. */
+static double g(double x)
 {
-    return GRAV * MASA / VEL * (1.0 - exp(-c * TIEMPO / MASA));
+    return x + f(x)/2;
 }
 
 /* ===================================================================== */
@@ -69,7 +61,7 @@ typedef struct {
 static double error_aprox(double nuevo, double anterior)
 {
     /* COMPLETAR 1. Ojo: en C, abs() es para enteros; para double se usa fabs(). */
-    return  fabs((nuevo - anterior) / nuevo) * 100.0;   /* <- sustituya 0.0 por la expresión correcta */
+    return fabs((nuevo - anterior) / nuevo) * 100.0;
 }
 
 static void fila_cerrado(int k, double a, double b, double x, double ea, int con_ea)
@@ -128,7 +120,7 @@ static Resultado falsa_posicion(double a, double b)
     printf("%s\n", ENC_CERRADO);
     for (int k = 1; k <= NMAX; ++k) {
         /* COMPLETAR 2: el punto donde la recta corta el eje x. */
-        x = b - (f(b) * (a - b)) / (f(a) - f(b));   /* <- sustituya 0.0 por la expresión correcta */
+        x = b - (f(b) * (a - b)) / (f(a) - f(b));
         if (k > 1) ea = error_aprox(x, x_ant);
         fila_cerrado(k, a, b, x, ea, k > 1);
         r.x = x; r.ea = ea; r.k = k;
@@ -152,7 +144,7 @@ static Resultado punto_fijo(double x)
     fila_abierto(0, x, 0.0, 0);
     for (int k = 1; k <= NMAX; ++k) {
         /* COMPLETAR 3: la siguiente aproximación. */
-        x_nuevo = g(x);   /* <- sustituya 0.0 por la expresión correcta */
+        x_nuevo = g(x);
         ea = error_aprox(x_nuevo, x);
         x = x_nuevo;
         fila_abierto(k, x, ea, 1);
@@ -174,7 +166,7 @@ static Resultado newton(double x)
     fila_abierto(0, x, 0.0, 0);
     for (int k = 1; k <= NMAX; ++k) {
         /* COMPLETAR 4: la fórmula de Newton-Raphson, con f y fp. */
-        x_nuevo = x - f(x) / fp(x);   /* <- sustituya 0.0 por la expresión correcta */
+        x_nuevo = x - f(x) / fp(x);
         ea = error_aprox(x_nuevo, x);
         x = x_nuevo;
         fila_abierto(k, x, ea, 1);
@@ -196,7 +188,7 @@ static Resultado secante_modificada(double x, double delta)
     fila_abierto(0, x, 0.0, 0);
     for (int k = 1; k <= NMAX; ++k) {
         /* COMPLETAR 5: la pendiente es (f(x + delta) - f(x)) / delta. */
-        x_nuevo = x - (delta * f(x)) / (f(x + delta) - f(x));   /* <- sustituya 0.0 por la expresión correcta */
+        x_nuevo = x - (delta * f(x)) / (f(x + delta) - f(x));
         ea = error_aprox(x_nuevo, x);
         x = x_nuevo;
         fila_abierto(k, x, ea, 1);
