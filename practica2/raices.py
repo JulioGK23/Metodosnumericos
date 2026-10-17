@@ -6,8 +6,7 @@ por método y un resumen; las tablas deben coincidir, cifra por cifra, con las
 de raices.m, raices.c y las de las láminas.
 
 Python es la herramienta de verificación del curso: al final compara contra
-scipy.optimize.brentq y genera las gráficas. Las gráficas faltan:
-complete la función graficar().
+scipy.optimize.brentq y genera las gráficas con la función graficar().
 
 UEA 1151039 · Métodos Numéricos en Ingeniería · UAM Azcapotzalco · 26-O
 
@@ -32,7 +31,7 @@ DESCR_G = "g(c) = g m / v (1 - exp(-c t / m))"
 GRAV = 9.8          # gravedad, m/s²
 MASA = 68.1         # masa del paracaidista, kg
 TIEMPO = 10.0       # tiempo de caída, s
-VEL = 42.0          # velocidad medida, m/s
+VEL = 40.0          # velocidad medida, m/s
 
 A, B = 12.0, 16.0   # intervalo de los métodos cerrados
 X0 = 12.5           # inicio de los métodos abiertos
@@ -203,19 +202,56 @@ def graficar(resultados, carpeta="img"):
        vertical en escala logarítmica y la tolerancia como línea horizontal.
     """
     os.makedirs(carpeta, exist_ok=True)
-    # COMPLETAR: las dos figuras que se describen arriba.
-    #
-    # Cada elemento de `resultados` es un diccionario con:
-    #   r["nombre"]    nombre del método
-    #   r["x"]         raíz aproximada
-    #   r["k"]         iteraciones realizadas
-    #   r["historia"]  lista de tuplas (k, x_k, ea_k); en la primera fila de los
-    #                  métodos cerrados ea_k vale None, y no se grafica.
-    #
-    # Funciones útiles: plt.figure, plt.plot, plt.semilogy, plt.axhline,
-    # plt.xlabel, plt.ylabel, plt.title, plt.legend, plt.grid, plt.savefig y
-    # plt.close. Guarde con plt.savefig(os.path.join(carpeta, "funcion.png")).
-    print("graficar(): falta completar; todavía no se generan las figuras.")
+    marcadores = ["o", "s", "^", "D", "v"]
+
+    # ---- Figura 1: f(x) y la raíz de cada método ----
+    # El rango cubre el intervalo [A, B] y también cualquier raíz que haya
+    # quedado fuera de él (por ejemplo, la de un método abierto).
+    raices = [r["x"] for r in resultados]
+    margen = 0.05 * (B - A)
+    inicio = min([A] + raices) - margen
+    fin = max([B] + raices) + margen
+    n = 400
+    xs = [inicio + (fin - inicio) * i / (n - 1) for i in range(n)]
+    ys = [f(x) for x in xs]
+
+    plt.figure(figsize=(8, 5))
+    plt.plot(xs, ys, color="black", label="f(x)")
+    plt.axhline(0.0, color="gray", linewidth=0.8)
+    for i, r in enumerate(resultados):
+        plt.plot(r["x"], f(r["x"]), marcadores[i % len(marcadores)],
+                 markersize=8, label=f"{r['nombre']}: {r['x']:.6f}")
+    plt.xlabel("x")
+    plt.ylabel("f(x)")
+    plt.title("f(x) y la raíz de cada método")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig(os.path.join(carpeta, "funcion.png"), dpi=150, bbox_inches="tight")
+    plt.close()
+
+    # ---- Figura 2: convergencia, ea contra k en escala logarítmica ----
+    plt.figure(figsize=(8, 5))
+    for i, r in enumerate(resultados):
+        # Se omiten los None (primera fila de los métodos cerrados) y los
+        # ceros, que la escala logarítmica no puede dibujar.
+        puntos = [(k, ea) for (k, _, ea) in r["historia"]
+                  if ea is not None and ea > 0.0]
+        if not puntos:
+            continue
+        ks = [p[0] for p in puntos]
+        eas = [p[1] for p in puntos]
+        plt.semilogy(ks, eas, marker=marcadores[i % len(marcadores)],
+                     label=r["nombre"])
+    plt.axhline(TOL, color="red", linestyle="--", label=f"Tolerancia {TOL:g} %")
+    plt.xlabel("k (iteración)")
+    plt.ylabel("ea (%)")
+    plt.title("Convergencia de los cinco métodos")
+    plt.legend()
+    plt.grid(True, which="both", alpha=0.4)
+    plt.savefig(os.path.join(carpeta, "convergencia.png"), dpi=150, bbox_inches="tight")
+    plt.close()
+
+    print(f"Figuras guardadas en {carpeta}/funcion.png y {carpeta}/convergencia.png")
 
 
 def main():
