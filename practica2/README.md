@@ -143,6 +143,7 @@ su captura con un commit propio (ver `COMO_CORRER.md`, sección 7).
 ## Uso de inteligencia artificial
 
 Ninguno / Cuál y para qué.
+Se utilizó la inteligencia artificial Claude como herramienta de apoyo para analizar e interpretar los resultados obtenidos en las tablas. Su uso permitió comparar el número de iteraciones, los errores aproximados y los valores obtenidos con los métodos de bisección, falsa posición, punto fijo, Newton-Raphson y secante modificada.
 
 ## Referencias
 [1] Chapra, S. C., & Canale, R. P. (2015). *Métodos Numéricos para Ingenieros* (7a ed.). McGraw-Hill. Capítulos 5 y 6. <br>
