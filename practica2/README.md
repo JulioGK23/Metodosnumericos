@@ -8,7 +8,7 @@
 | Equipo | |
 | Integrantes (nombre, matrícula y licenciatura) |*Fuentes Bayona Luis Fernando 2243038451 Ingenieria Mecanica   *Trejo Ponce Julio Antonio 2243038326 Ingenieria Electronica |
 | Ecuación asignada | Número y problema |
-| Fecha | |
+| Fecha | 16/10/2026|
 
 ---
 
@@ -144,6 +144,6 @@ su captura con un commit propio (ver `COMO_CORRER.md`, sección 7).
 Ninguno / Cuál y para qué.
 
 ## Referencias
-[1] Chapra, S. C., & Canale, R. P. (2015). *Métodos Numéricos para Ingenieros* (7a ed.). McGraw-Hill. Capítulos 5 y 6.
+[1] Chapra, S. C., & Canale, R. P. (2015). *Métodos Numéricos para Ingenieros* (7a ed.). McGraw-Hill. Capítulos 5 y 6. <br>
 [2] Burden, R. L., & Faires, J. D. (2011). *Análisis Numérico* (9a ed.). Cengage Learning. Capítulo 2.
 
