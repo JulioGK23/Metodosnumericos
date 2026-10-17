@@ -131,11 +131,12 @@ su captura con un commit propio (ver `COMO_CORRER.md`, sección 7).
 | Integrante | Usuario de GitHub | Captura |
 |---|---|---|
 |Trejo Ponce Julio Antonio |JulioGK23 | `  img/07-julio-trejo.png  ` |
-| | | |
+| Fuentes Bayona Luis Fernando|Luis-Fuentes08 |`   img/08-luis-fuentes.png  `  |
 | | | |
 
 
 ![Julio Trejo](img/07-julio-trejo.png)
+![Luis Fuentes](img/08-luis-fuentes.png)
 
   
 
