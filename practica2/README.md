@@ -44,11 +44,11 @@ x_nuevo = x - (delta * f(x)) / (f(x + delta) - f(x));
 
 | | |
 |---|---|
-| f(x) | |
-| f'(x) | |
-| g(x) | |
-| Intervalo [a, b] | |
-| x₀ y δ | |
+| f(x) | f(β) = sen β − Q cos β + Q e^(−β/Q), con Q = ωL/R = 2 |
+| f'(x) | f'(β) = cos β + Q sen β − e^(−β/Q) |
+| g(x) | g(β) = β + f(β)/2 |
+| Intervalo [a, b] | [3, 6] |
+| x₀ y δ | x₀ = 4 · δ = 0.01 |
 | Tolerancia | εa ≤ 0.5 % |
 
 ![C con nuestra ecuación](img/05-c-ecuacion.png)
@@ -107,19 +107,21 @@ Agreguen las filas que hagan falta.
 
 | Método | Raíz | Iteraciones | εa (%) | f(raíz) | Error verdadero (%) |
 |---|---|---|---|---|---|
-| Bisección | 14.812500 | 6| 0.4219 |-6.288337e-02 | |
-| Falsa posición | 14.781695 |3 |  0.0845|  -2.907592e-03 | |
-| Punto fijo | 14.762313 | 4| 0.3102| 3.490305e-02 | |
-| Newton-Raphson | 14.780204 | 3| 0.0102  | 1.749853e-07 | |
-| Secante modificada |  14.780206 |3 |  0.0073|  -4.011741e-06| |
+| Bisección | 4.347656 | 8 | 0.2695 | 6.662841e-03 | 0.065492 |
+| Falsa posición | 4.350509 | 4 | 0.0319 | -7.894871e-06 | 0.000078 |
+| Punto fijo | 4.352179 | 3 | 0.2650 | -3.911795e-03 | 0.038461 |
+| Newton-Raphson | 4.350503 | 2 | 0.1407 | 5.485745e-06 | 0.000054 |
+| Secante modificada | 4.350500 | 2 | 0.1323 | 1.358824e-05 | 0.000134 |
 
-Raíz de referencia (SciPy):
+Raíz de referencia (SciPy): 4.350505468
 
 ### Análisis
 
 ¿Qué método necesitó menos iteraciones y cuál más? ¿Por qué los cinco no dan
 exactamente el mismo número? ¿Alguno no alcanzó la tolerancia o tardó mucho más que
-los otros? ¿Por qué?
+los otros? ¿Por qué?}
+
+Newton-Raphson y la secante modificada necesitaron menos iteraciones (2), y la bisección más (8); el punto fijo y la falsa posición quedaron en medio (3 y 4). Los cinco métodos no dan exactamente el mismo número porque ninguno busca la raíz exacta: cada uno se detiene cuando el cambio entre dos aproximaciones seguidas baja de 0.5 %, y cada uno llega a ese punto por un camino distinto. Todos quedaron a menos de 0.07 % de la raíz de referencia (4.350505468). La secante modificada da casi lo mismo que Newton-Raphson (4.350500 contra 4.350503) porque aproxima la derivada con una diferencia finita (δ = 0.01) en vez de usar la derivada exacta. El εa final de Newton-Raphson (0.1407 %) es mucho mayor que su error verdadero (0.000054 %), porque εa mide cuánto cambió respecto a la iteración anterior, y en un método de convergencia rápida la anterior estaba mucho más lejos de la raíz que la última. Ningún método dejó de alcanzar la tolerancia ni tardó demasiado: el que más tardó fue la bisección, que apenas reduce el intervalo a la mitad en cada paso.
 
 ## 5. Cada integrante en su computadora
 
@@ -139,4 +141,6 @@ su captura con un commit propio (ver `COMO_CORRER.md`, sección 7).
 Ninguno / Cuál y para qué.
 
 ## Referencias
+[1] Chapra, S. C., & Canale, R. P. (2015). *Métodos Numéricos para Ingenieros* (7a ed.). McGraw-Hill. Capítulos 5 y 6.
+[2] Burden, R. L., & Faires, J. D. (2011). *Análisis Numérico* (9a ed.). Cengage Learning. Capítulo 2.
 
