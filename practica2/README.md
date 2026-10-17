@@ -130,8 +130,7 @@ su captura con un commit propio (ver `COMO_CORRER.md`, sección 7).
 
 | Integrante | Usuario de GitHub | Captura |
 |---|---|---|
-img/07-julio-trejo.png
-|Trejo Ponce Julio Antonio |JulioGK23 | ` ` |
+|Trejo Ponce Julio Antonio |JulioGK23 | `  img/07-julio-trejo.png  ` |
 | | | |
 | | | |
 
