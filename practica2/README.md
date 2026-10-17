@@ -134,7 +134,7 @@ su captura con un commit propio (ver `COMO_CORRER.md`, sección 7).
 |2 | | |
 | | | |
 
-   ![Julio Trejo](img/07-julio-trejo.png)
+  
 
 ## Uso de inteligencia artificial
 
