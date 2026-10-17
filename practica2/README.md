@@ -130,11 +130,11 @@ su captura con un commit propio (ver `COMO_CORRER.md`, sección 7).
 
 | Integrante | Usuario de GitHub | Captura |
 |---|---|---|
-| | | `img/07-integrante-apellido.png` |
-| | | |
+|1 |JulioGK23 | `img/07-integrante-apellido.png` |
+|2 | | |
 | | | |
 
-![Integrante 1](img/07-integrante-apellido.png)
+   ![Julio Trejo](img/07-julio-trejo.png)
 
 ## Uso de inteligencia artificial
 
